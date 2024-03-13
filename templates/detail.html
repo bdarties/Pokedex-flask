@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pokemon.name }} - Détails</title>
+</head>
+<body>
+    <h1>{{ pokemon.name }} - Détails</h1>
+    <img src="{{ pokemon.image }}" alt="{{ pokemon.name }} Image">
+    <p>Type: {{ pokemon.types[0].type.name }}</p>
+    <p>Image: {{ pokemon.sprites.front_default }}</p>
+    
+    <p>Autres détails...</p>
+</body>
+</html>

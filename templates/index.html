@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+</head>
+<body>
+    <h1>Pokédex</h1>
+    <form action="/" method="get">
+  <label for="search">Recherche :</label>
+  <input type="text" id="search" name="search" placeholder="Nom du Pokémon">
+  <button type="submit">Rechercher</button>
+ </form>
+
+    <ul>
+        {% for pokemon in pokemons %}
+            <li><a href="{{ url_for('pokemon_detail', id=pokemon.url|extract_id) }}">{{ pokemon.name }} <IMG SRC='{{pokemon.url|extract_id|getImg}}'></a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
